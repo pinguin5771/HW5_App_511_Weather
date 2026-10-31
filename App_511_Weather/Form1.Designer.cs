@@ -49,9 +49,10 @@
             dataPanel1.Controls.Add(pictureBoxIcon);
             dataPanel1.Controls.Add(labelCity);
             dataPanel1.Controls.Add(button1);
-            dataPanel1.Location = new Point(12, 12);
+            dataPanel1.Location = new Point(20, 19);
+            dataPanel1.Margin = new Padding(5);
             dataPanel1.Name = "dataPanel1";
-            dataPanel1.Size = new Size(380, 210);
+            dataPanel1.Size = new Size(618, 336);
             dataPanel1.TabIndex = 0;
             // 
             // labelSummary
@@ -59,9 +60,10 @@
             labelSummary.AutoSize = true;
             labelSummary.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             labelSummary.ForeColor = Color.WhiteSmoke;
-            labelSummary.Location = new Point(17, 162);
+            labelSummary.Location = new Point(28, 259);
+            labelSummary.Margin = new Padding(5, 0, 5, 0);
             labelSummary.Name = "labelSummary";
-            labelSummary.Size = new Size(98, 23);
+            labelSummary.Size = new Size(155, 37);
             labelSummary.TabIndex = 6;
             labelSummary.Text = "Feels like...";
             // 
@@ -70,17 +72,19 @@
             labelTemperature.AutoSize = true;
             labelTemperature.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
             labelTemperature.ForeColor = Color.WhiteSmoke;
-            labelTemperature.Location = new Point(194, 68);
+            labelTemperature.Location = new Point(315, 109);
+            labelTemperature.Margin = new Padding(5, 0, 5, 0);
             labelTemperature.Name = "labelTemperature";
-            labelTemperature.Size = new Size(137, 67);
+            labelTemperature.Size = new Size(217, 106);
             labelTemperature.TabIndex = 5;
             labelTemperature.Text = "10°C";
             // 
             // pictureBoxIcon
             // 
-            pictureBoxIcon.Location = new Point(17, 54);
+            pictureBoxIcon.Location = new Point(28, 86);
+            pictureBoxIcon.Margin = new Padding(5);
             pictureBoxIcon.Name = "pictureBoxIcon";
-            pictureBoxIcon.Size = new Size(104, 104);
+            pictureBoxIcon.Size = new Size(100, 100);
             pictureBoxIcon.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxIcon.TabIndex = 4;
             pictureBoxIcon.TabStop = false;
@@ -90,26 +94,29 @@
             labelCity.AutoSize = true;
             labelCity.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             labelCity.ForeColor = Color.WhiteSmoke;
-            labelCity.Location = new Point(17, 19);
+            labelCity.Location = new Point(28, 30);
+            labelCity.Margin = new Padding(5, 0, 5, 0);
             labelCity.Name = "labelCity";
-            labelCity.Size = new Size(218, 32);
+            labelCity.Size = new Size(338, 51);
             labelCity.TabIndex = 3;
             labelCity.Text = "Unknown city, AA";
             // 
             // button1
             // 
-            button1.Location = new Point(-161, 274);
+            button1.Location = new Point(-262, 438);
+            button1.Margin = new Padding(5);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(153, 46);
             button1.TabIndex = 2;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
             // buttonGetData
             // 
-            buttonGetData.Location = new Point(298, 441);
+            buttonGetData.Location = new Point(484, 706);
+            buttonGetData.Margin = new Padding(5);
             buttonGetData.Name = "buttonGetData";
-            buttonGetData.Size = new Size(94, 29);
+            buttonGetData.Size = new Size(153, 46);
             buttonGetData.TabIndex = 4;
             buttonGetData.Text = "Get data";
             buttonGetData.UseVisualStyleBackColor = true;
@@ -118,30 +125,33 @@
             // weatherItemsPanel
             // 
             weatherItemsPanel.BackColor = Color.Transparent;
-            weatherItemsPanel.Location = new Point(12, 243);
+            weatherItemsPanel.Location = new Point(20, 389);
+            weatherItemsPanel.Margin = new Padding(5);
             weatherItemsPanel.Name = "weatherItemsPanel";
-            weatherItemsPanel.Size = new Size(380, 180);
+            weatherItemsPanel.Size = new Size(618, 288);
             weatherItemsPanel.TabIndex = 5;
             // 
             // textBoxCityName
             // 
-            textBoxCityName.Location = new Point(12, 442);
+            textBoxCityName.Location = new Point(20, 707);
+            textBoxCityName.Margin = new Padding(5);
             textBoxCityName.Name = "textBoxCityName";
-            textBoxCityName.Size = new Size(280, 27);
+            textBoxCityName.Size = new Size(452, 39);
             textBoxCityName.TabIndex = 6;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(404, 482);
+            ClientSize = new Size(654, 762);
             Controls.Add(textBoxCityName);
             Controls.Add(weatherItemsPanel);
             Controls.Add(buttonGetData);
             Controls.Add(dataPanel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(5);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

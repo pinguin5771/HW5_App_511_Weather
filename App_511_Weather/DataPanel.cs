@@ -10,7 +10,7 @@ namespace App_511_Weather;
 
 internal class DataPanel : Panel
 {
-    private Color panelColor = Color.FromArgb(100, 255, 255, 255);
+    private Color panelColor = Color.FromArgb(120, 255, 255, 255);
     private int borderRadius = 30;
     private Color borderColor = Color.Transparent;
     private int borderSize = 0;

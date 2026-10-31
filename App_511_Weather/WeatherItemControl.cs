@@ -25,6 +25,7 @@ namespace App_511_Weather
             InitializeComponent();
 
             this.itemData = itemData;
+            pictureBoxIcon.Image = itemData.Picture;
 
             SetBackColor();
 
@@ -47,10 +48,18 @@ namespace App_511_Weather
             {
                 labelTitle.Text = itemData.Title;
                 labelInfo.Text = itemData.Data;
+                pictureBoxIcon.Image = itemData.Picture;
+                PanelName.PerformLayout();
+                CenterPanelName();
             }
         }
 
-
+        private void CenterPanelName()
+        {
+            PanelName.Left =
+                (dataPanel1.ClientSize.Width - PanelName.Width) / 2;
+            labelInfo.Left = (dataPanel1.ClientSize.Width - labelInfo.Width) / 2;
+        }
 
     }
 }

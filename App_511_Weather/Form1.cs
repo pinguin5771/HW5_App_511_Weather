@@ -89,7 +89,7 @@ namespace App_511_Weather
                 new WeatherItemData(WeatherItemType.Visibility,
                     $"{weather.Visibility / 1000} km"),
                 new WeatherItemData(WeatherItemType.Sunset,
-                    $"{WeatherDataConverter.ConvertUnixTimestampToDateTime(weather.Sys.Sunset)}")
+                    $"{WeatherDataConverter.ConvertUnixTimestampToDateTime(weather.Sys.Sunset).ToString("hh:mm tt")}")
             };
 
             return items;

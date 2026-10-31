@@ -82,6 +82,7 @@ public class WeatherItemData
     public WeatherItemType Type { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Data { get; set; } = string.Empty;
+    public Image Picture { get; set; }
 
 
     public WeatherItemData(WeatherItemType type, string data)
@@ -89,6 +90,7 @@ public class WeatherItemData
         Type = type;
         Title = GetTitleByType(type);
         Data = data;
+        Picture = Image.FromFile(GetPicture(type));
     }
 
 
@@ -106,4 +108,20 @@ public class WeatherItemData
             _ => "Unknown"
         };
     }
+
+    private static string GetPicture(WeatherItemType type)
+    {
+        return type switch
+        {
+            WeatherItemType.Wind => @"..\..\..\Icons/wind.png",
+            WeatherItemType.Humidity => @"..\..\..\Icons/humidity.png",
+            WeatherItemType.Pressure => @"..\..\..\Icons/pressure.png",
+            WeatherItemType.Clouds => @"..\..\..\Icons/clouds.png",
+            WeatherItemType.Visibility => @"..\..\..\Icons/visibility.png",
+            WeatherItemType.Sunset => @"..\..\..\Icons/sunset.png",
+
+            _ => @"..\..\..\Icons/unset.png"
+        };
+    }
+
 }
